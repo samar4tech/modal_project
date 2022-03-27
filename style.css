@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: #333;
+  line-height: 1.5;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background: linear-gradient(to top left, #72857f, #122753);
+}
+
+.show-modal {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.75rem 3.5rem;
+  margin: 5rem 2rem;
+  border: none;
+  background-color: #222;
+  color: #fff;
+  border-radius: 10rem;
+  cursor: pointer;
+  box-shadow: 0 0 5px 5px #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: red;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+h1 {
+  font-size: 2.7rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff;
+}
+
+p {
+  font-size: 1.6rem;
+  font-style: oblique;
+}
+
+/* -------------------------- */
+/* CLASSES TO MAKE MODAL WORK */
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+
+  text-align: justify;
+
+  background: linear-gradient(to top left, #72857f, #122753);
+  color: #fff;
+  padding: 4rem;
+  border-radius: 5rem;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 1rem 1.5rem rgb(255, 255, 255);
+  z-index: 10;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+@media only screen and (max-width: 593px) {
+  .show-modal {
+    font-size: 1rem;
+  }
+  .modal {
+    width: 80%;
+    height: 65%;
+  }
+  p {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 461px) {
+  .show-modal {
+    font-size: 0.5rem;
+
+    padding: 1.1rem 2.5rem;
+    margin: 5rem 2rem;
+  }
+  .modal {
+    width: 80%;
+    height: 60%;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .close-modal {
+    font-size: 3.5rem;
+  }
+}
+@media only screen and (max-width: 366px) {
+  /* .show-modal {
+      font-size: 0.5rem;
+  
+      padding: 1.1rem 2.5rem;
+      margin: 5rem 2rem;
+    } */
+  .modal {
+    height: 50%;
+  }
+  p {
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (max-width: 307px) {
+  /* .show-modal {
+      font-size: 0.5rem;
+  
+      padding: 1.1rem 2.5rem;
+      margin: 5rem 2rem;
+    } */
+  .modal {
+    height: 40%;
+  }
+  p {
+    font-size: 0.7rem;
+  }
+  h1 {
+    font-size: 1rem;
+  }
+  .close-modal {
+    font-size: 2.5rem;
+  }
+}
